@@ -52,6 +52,8 @@ function PrecioFinal ()
     resultado= precioUno+precioDos+precioTres;
     resultado+=resultado*0.21;
 
+    //al total se le agregar IVA
     alert("El tolal + IVA es : "+resultado);
+
 
 }
