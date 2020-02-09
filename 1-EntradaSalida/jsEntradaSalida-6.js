@@ -4,26 +4,26 @@ mostrar el resulto por medio de "ALERT"*/
 function sumar()
 {
 
-    //var numeroUno;
-    //var numeroDos;
+//numeroUno
+//numeroDos
 
-    //numeroUno = parseInt(document.getElementById("numeroUno").value);
-    //numeroDos = parseInt(document.getElementById("numeroDos").value);
-    //alert(numeroUno+numeroDos);
-    
+var primerNumero;
+var segundoNumero;
+var resultado;
+
+//En este casp el parseInt se ingresa de la siguiente manera:
+//nombreVariable = parseInt(document.getElementById("id").value);
+
+primerNumero = parseInt(document.getElementById("numeroUno").value);
+
+segundoNumero = parseInt(document.getElementById("numeroDos").value);
 
 
-    var numeroUno;
-    var numeroDos;
-    var numeroDosParseado;
-    var resultado;
+resultado =  primerNumero + segundoNumero;
 
-    numeroUno = parseInt(document.getElementById("numeroUno").value);
-    numeroDos = document.getElementById("numeroDos").value;
-    numeroDosParseado=parseInt(numeroDos);
-   resultado = numeroUno + numeroDosParseado;
-    alert(resultado);
-    
+
+alert("El total de la sume es: "+resultado); 
+
 
 
 

@@ -5,17 +5,16 @@
 function mostrar()
 {
 
-//var nombre = prompt("ingrese su nombre");
-//document.getElementById("elNombre").value = nombre; 
+	var nombre;
 
-//declaro variable
-var nombre;
 
-//asigno variable
-nombre = prompt("ingrese su nombre");
+	nombre = prompt("Ingrese nombre");
 
-//asigno variable al id
-document.getElementById("elNombre").value = nombre; 
+	//para mostrar variable por id, el getElementById va de la siguiente manera:
+	//document.getElementById("id").value = nombreDeLaVariable;
+
+	document.getElementById("elNombre").value = nombre;
+
 
 }
 

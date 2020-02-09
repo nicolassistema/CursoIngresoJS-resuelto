@@ -2,13 +2,14 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'mostrar'*/
 function mostrar()
 {
-	//alert("Estoy en el ejercicio 3");
+
 	var nombre;
-	//trae todo lo del formulario
+
+	//Esta es la estructura basica del "getElementById" y se escribe :
+	//"nombre de la variable = document.getElementById("id").value;""
 	nombre = document.getElementById("elNombre").value;
+
 	alert(nombre);
-
-
 }
 
 

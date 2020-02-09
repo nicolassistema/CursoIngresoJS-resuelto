@@ -4,45 +4,57 @@ mostrar el resulto por medio de "ALERT"
 ej.: "la Resta es 750"*/ 
 function sumar()
 {	
-    var numeroUno;
-    var numeroDos;
+    var primerNumero;
+    var segundoNumero;
+    var resultado;
 
-    numeroUno = parseFloat(document.getElementById("numeroUno").value);
-    numeroDos = parseFloat(document.getElementById("numeroDos").value);
-    alert("la suma es :"+numeroUno+numeroDos);
-	
+    primerNumero=parseInt(document.getElementById("numeroUno").value);
+    segundoNumero=parseInt(document.getElementById("numeroDos").value);
+
+    resultado=primerNumero+segundoNumero;
+
+    alert("El resultado de la suma es: "+resultado); 
 }
 
 function restar()
 {
-    var numeroUno;
-    var numeroDos;
+    var primerNumero;
+    var segundoNumero;
+    var resultado;
 
-    numeroUno = parseFloat(document.getElementById("numeroUno").value);
-    numeroDos = parseFloat(document.getElementById("numeroDos").value);
-    alert("la resta es :"+numeroUno-numeroDos);
+    primerNumero=parseInt(document.getElementById("numeroUno").value);
+    segundoNumero=parseInt(document.getElementById("numeroDos").value);
+
+    resultado=primerNumero-segundoNumero;
+
+    alert("El resultado de la resta es: "+resultado); 	
 }
 
 function multiplicar()
 { 
-    var numeroUno;
-    var numeroDos;
+    var primerNumero;
+    var segundoNumero;
+    var resultado;
 
-    numeroUno = parseFloat(document.getElementById("numeroUno").value);
-    numeroDos = parseFloat(document.getElementById("numeroDos").value);
-    alert("la multiplicacion es :"+numeroUno*numeroDos);
+    primerNumero=parseInt(document.getElementById("numeroUno").value);
+    segundoNumero=parseInt(document.getElementById("numeroDos").value);
+
+    resultado=primerNumero*segundoNumero;
+
+    alert("El resultado de la multiplicacion es: "+resultado); 
 }
 
 function dividir()
 {
-    var numeroUno;
-    var numeroDos;
+    var primerNumero;
+    var segundoNumero;
+    var resultado;
 
-    numeroUno = parseFloat(document.getElementById("numeroUno").value);
-    numeroDos = parseFloat(document.getElementById("numeroDos").value);
-    alert("la division es :"+numeroUno/numeroDos);
+    primerNumero=parseInt(document.getElementById("numeroUno").value);
+    segundoNumero=parseInt(document.getElementById("numeroDos").value);
+
+    resultado=primerNumero/segundoNumero;
+
+    alert("El resultado de la division es: "+resultado); 
 }
-
-
-    
 
