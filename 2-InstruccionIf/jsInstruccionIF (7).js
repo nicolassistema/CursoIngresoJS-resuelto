@@ -8,7 +8,7 @@ numeroEdad=parseInt(document.getElementById("edad").value);
 
 opcion = (document.getElementById("estadoCivil").value);
 
-
+//Para analizarlo despues 
 if  (numeroEdad<18)
 	{
 		if(opcion != "Soltero")
