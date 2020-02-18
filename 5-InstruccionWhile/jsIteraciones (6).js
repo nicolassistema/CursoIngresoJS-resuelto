@@ -4,7 +4,7 @@ function mostrar()
 	var contador=0;
 	var acumulador=0;
 	
-
+//
 
  // Entro con variable contador = 0 al while
 	while (contador < 5 ) {
