@@ -12,13 +12,10 @@ function mostrar()
 	var promedioNegativos;
 	var promedioPositivos;
 	var diferenciaNegativosPositivos;
-	var respuesta="si";
+	//var respuesta="si";
 	
 	
-	
-
-	while(respuesta!='no')
-	{
+	do {
 		numeroIngresado = prompt("Ingrese un numero");
 		numeroIngresado = parseInt(numeroIngresado);
 		//Se valida el dato correcto--------------------------------------------------
@@ -27,6 +24,8 @@ function mostrar()
 		numeroIngresado = parseInt(numeroIngresado); 
 		//----------------------------------------------------------------------------
 		}
+		//Se valida el dato esta vacio--------------------------------------------------
+		
 		if (numeroIngresado>0) { //en este if solo entran los positivos
 		acumuladorPositivos = acumuladorPositivos + numeroIngresado;
 		cantidadPositivos++;
@@ -46,11 +45,20 @@ function mostrar()
 		}else{
 		cantidadCeros++;
 		}
-
 		contador++;
+
+
 		respuesta = prompt("Desea continuar? Si desea cancelar escriba no");
+		//validacion de final--------------------------------------------
+		while (respuesta != "si" && respuesta != "no" ) {
+			respuesta = prompt("por favor ingrese "+"si"+" para continuar, "+"no"+" para finalizar");
+		}
+		//----------------------------------------------------------------
 
 }//termina el bucle
+while(respuesta !="no");
+//while(respuesta ==undefined);
+
 
 
 
