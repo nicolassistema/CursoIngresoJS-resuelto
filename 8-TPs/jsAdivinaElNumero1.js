@@ -14,13 +14,65 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
 	 
-		//alert(numeroSecreto );
-	
+	//alert(numeroSecreto );
+  contadorIntentos = 0;
+  console.log("contador de reintentos restarteado: "+contadorIntentos);
+
+
+	numeroSecreto = Math.floor(Math.random()*100 )+ 1;
+  numeroSecreto = parseInt(numeroSecreto);
+  console.log("numero secreto: "+numeroSecreto);
+  alert("El numero secreto ya se genero. Por favor ingrese un numero y pulse 'Verificar' para saber si adivino el numero secreto");
+  
+
 
 }
 
 function verificar()
 {
-	
+
+
+
+
+//Variables
+var numeroEntrada;
+var flag = 0;
+var flag2 = 0;
+console.log("numero secreto: "+numeroSecreto);
+//Entrada
+numeroEntrada=parseInt(document.getElementById("numero").value);
+console.log("numero secreto: "+numeroEntrada);
+
+if (isNaN(numeroEntrada)) {
+  alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+ flag2 = 1;
+ //location.reload(true);
+}
+
+
+
+
+
+
+if ((numeroEntrada == numeroSecreto)&& (!(isNaN(cantidad)))) {
+  alert("Usted es un ganador!!! y en solo X intentos.");
+}else if (numeroEntrada < numeroSecreto){
+  alert("Perdiste, te falta x para llegar al número secreto" );
+}else if(numeroEntrada > numeroSecreto){
+alert("Perdiste, te pasaste x para llegar al número secreto " );
+}
+
+contadorIntentos ++;
+
+console.log("Cantidad de intentos: "+contadorIntentos);
+
+document.getElementById('intentos').value=contadorIntentos;
+
+
+
+
+
+  
+
 	
 }
