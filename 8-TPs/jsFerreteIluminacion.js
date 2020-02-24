@@ -16,12 +16,19 @@ var precio = 35;
 var marca;
 var iibb;
 var porcentaje;
+var flag = 0;
 
-//primer entrada de datos
+
+//primer entrada de datos//
 cantidad=parseInt(document.getElementById("Cantidad").value);
 marca = (document.getElementById("Marca").value);
 
 
+if (isNaN(cantidad)) {
+    alert("Por favor ingresar solamente la cantidad de lamparas en el campo 'Cantidad de lamparas'");
+   flag = 1;
+   location.reload(true);
+}
 
 
 //Calculos matematicos
@@ -63,9 +70,12 @@ if (precio <= 120) {
     porcentaje = iibb;
     precio = precio + iibb;
     document.getElementById("precioDescuento").value = precio;
-    alert("Usted pago "+porcentaje+" de IIBB.");
-}
-  
+
+    if (!(isNaN(cantidad))) {
+        alert("Usted pago "+porcentaje+"$ de IIBB.");
+    } 
+    
+} 
 
 
 

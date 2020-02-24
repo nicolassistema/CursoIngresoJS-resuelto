@@ -56,6 +56,7 @@ function Circulo ()
     
     
     radio=parseFloat(document.getElementById("Radio").value);
+    
 
     if (isNaN(radio)) {
         alert("Por favor ingresar solamente numeros en el campo 'Radio del terreno'");
