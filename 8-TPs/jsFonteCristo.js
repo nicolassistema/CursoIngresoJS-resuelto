@@ -7,7 +7,19 @@ c.	Se pedirán un número positivo y se mostrará la cantidad de números divisi
 d.	Se pedirán un número positivo y se mostrará si el número es un número primo o no.
 e.	Se pedirán un número positivo y se mostrará la cantidad de números Primos desde el número ingresado hasta el cero.
 */
-
+function Rumeros(string){//Solo numeros
+    var out = '';
+    var filtro = '1234567890';//Caracteres validos
+  
+    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
+    for (var i=0; i<string.length; i++)
+       if (filtro.indexOf(string.charAt(i)) != -1) 
+             //Se añaden a la salida los caracteres validos
+       out += string.charAt(i);
+  
+    //Retornar valor filtrado
+    return out;
+  } 
 
 function NumerosPares() {
 //Variables    
@@ -25,7 +37,10 @@ numInicial = numero;
 //Inicializador de conteo
 contador = 0;
 
-
+if (isNaN(numero)) {
+    alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+     location.reload(true);
+  }
 
 
 do {
@@ -47,9 +62,11 @@ do {
         numero = numero -1;
     }
 
-} while (numero != 0);
+} while (numero != 0 && !isNaN(numero) );
 
+if (!isNaN(numero)) {
 alert("La cantidad de pares entre el numero ingresado "+numInicial+" y el 0 es: "+contador);
+}
 
 }
 
@@ -69,6 +86,10 @@ numInicial = numero;
 
 //Inicializador de conteo
 contador = 0;
+if (isNaN(numero)) {
+    alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+     location.reload(true);
+  }
 
 
 
@@ -92,10 +113,11 @@ do {
         numero = numero -1;
     }
 
-} while (numero != 0);
+} while (numero != 0 && (!isNaN(numero)));
 
+if (!isNaN(numero)) {
 alert("La cantidad de impares entre el numero ingresado "+numInicial+" y el 0 es: "+contador);
-
+}
 }
 
 
@@ -118,7 +140,10 @@ numInicial = numero;
 contador = 0;
 divisible = 1;
 
-
+if (isNaN(numero)) {
+    alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+     location.reload(true);
+  }
 
 
 
@@ -150,8 +175,9 @@ do {
 
 } while (divisible != 100);
 
+if (!isNaN(numero)) {
 alert("La cantidad de numeros divisibles entre el 1 y el 100 para el numero ingresado "+numInicial+" es de: "+contador);
-
+}
 
 
 
@@ -167,10 +193,17 @@ function VerificarPrimo() {
   var contador;
   contador = 1;
   numero=parseInt(document.getElementById("numero").value);
+  console.log(numero);
 primo = 1; 
   i=2;
 
-  while (i<numero) {
+  if (isNaN(numero)) {
+    alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+     location.reload(true);
+  }
+
+
+  while (i<numero && (!isNaN(numero))) {
       if (numero%i==0) {
           primo=false;
       }
@@ -178,9 +211,9 @@ primo = 1;
    
   }
 
-if (primo==true) {
+if (primo==true && numero !=1 && (!isNaN(numero))) {
     alert("es primo");
-}else{
+}else if (!isNaN(numero)){
     alert("no es primo");
 }
 
@@ -191,19 +224,38 @@ function NumerosPrimos() {
   var primo;
   var numero;
   var contador;
-  contador = 1;
+  var contador2;
+  contador2 = 0;
+  
   numero=parseInt(document.getElementById("numero").value);
 primo = 1; 
   i=2;
 
-  while (i<numero) {
-      if (numero%i==0) {
-          primo=false;
-      }
-      i++;
-      contador++;
+  if (isNaN(numero)) {
+    alert("Por favor ingresar un numero en el campo 'Ingrese numero'");
+     location.reload(true);
   }
- alert("La cantidad de números Primos desde el número ingresado hasta el cero es de: "+contador); 
+    for (var i = 2; i <= numero; i++) {
+        var primo = 1;
+        var contador = 2;
+        while(contador <= i/2 && primo) {
+            if (i % contador === 0) {
+                primo = 0;
+            }
+            contador++;
+        }
+        if( primo ) {
+           
+            contador2++;
+       
+        }
+    } 
+    
+    if (!isNaN(numero)) {
+        alert("La cantidad de números Primos desde el número ingresado "+numero+" hasta 0 es de: "+contador2); 
+    }
+    
+
     
  
 }
