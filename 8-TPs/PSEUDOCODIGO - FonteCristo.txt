@@ -1,0 +1,37 @@
+Numeros pares
+numeros impares
+numeros divisibles
+verificar si es numero primo
+numeros primos
+
+
+
+[[==Logica==]]
+Numeros pares ==> mostrar cantidad e numeros pares desde ingresado hasta 0
+
+
+numero si su resto es 0, entonces
+contarlo, sino no hacer nada
+numero - 1 si su resto es 0, entonces
+contarlo, sino no hacer nada
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
