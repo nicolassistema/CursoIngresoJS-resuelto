@@ -1,7 +1,17 @@
 function mostrar()
 {
 
-var repetciones = prompt("ingrese el número de repeticiones");
+var numero = prompt("ingrese el número de repeticiones");
+numero = parseInt(numero);
+
+
+
+for (var contador = i; contador < 0 ; contador++) {
+    console.warn("numero: " + contador);
+
+    document.write(numero+"</br>");
+    
+}
 
 
 

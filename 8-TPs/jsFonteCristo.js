@@ -162,7 +162,7 @@ do {
     if (numerosPar == 0 ) {
         contador ++;
         console.log("contador: "+contador);
-        divisible = divisible + 1;
+        divisible++;
         console.log("Divisible: "+divisible);
     /*
     Flujo alternativo:

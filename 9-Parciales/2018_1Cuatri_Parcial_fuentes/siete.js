@@ -1,88 +1,42 @@
-function mostrar()
-{
-var nota;
-var notaInc;
-var sexo;
-var i;
-var flag;
-var flag2;
-var contador;
-var minimo;
-var sexoUlt;
-var alumno;
-
-alumno = 1;
-flag2 = 0;
-flag = 0;
-i = 0;
-contador = 0;
-nota = 0;
+function mostrar() {
+    var nota;
+    var sexo;
+    var acumuladorNotas = 0;
+    var promedioNotas;
+    var notaBaja;
+    var sexoBajo;
+    var contadorVMas6 = 0;
 
 
 
+    for (var i = 0; i < 5; i++) {
+        nota = parseInt(prompt("Ingrese nota (0-10): "));
+        while (nota < 0 || nota > 10 || isNaN(nota)) {
+            nota = parseInt(prompt("Nota invalida. Ingrese nota (0-10): "));
+        }
+        sexo = prompt("Ingrese sexo (f-m): ");
+        while (sexo != 'f' && sexo != 'm') {
+            sexo = prompt("Sexo invalido. Ingrese sexo (f-m): ");
+        }
 
-while (i < 3) {
-    sexo = prompt("Ingresar Sexo del alumno: "+alumno);
-    sexo = sexo.toLowerCase();
-    nota = parseInt(prompt("Ingresar nota del alumno: "+alumno));
-    console.log("ingresar nota: "+nota);
-    //nota = parent(nota);
+        acumuladorNotas = acumuladorNotas + nota;
 
-    //sumador de notas
-    
-    if (flag == 0) {
-        notaInc = nota;
-        flag =1;
-    }else{
+        if (i == 0 || nota < notaBaja) {
+            notaBaja = nota;
+            sexoBajo = sexo;
+        }
 
-        notaInc = nota + notaInc;
-    }
-    
+        if (sexo == 'm' && nota >= 6) {
+            contadorVMas6++;
+        }
 
-//observamos si son maximos y minimos
-if (flag2 == 0) {
-    //Entrariamos la primera vez y solo una vez
-    minimo = nota;
-    minimo=parseInt(minimo);
-    sexoUlt = sexo;
-    console.log("if: "+minimo);
-    //console.log("if: "+sexoUlt);
-    flag2 = 1;
-}else if (nota < minimo) {
-    minimo = nota;
-    sexoUlt = sexo;
+    }// fin for
 
-    console.log("else: "+minimo);
-    console.log("else: "+sexoUlt);
-    
-}
-    
+    promedioNotas = acumuladorNotas / 5;
 
-//Cantidad de alumnos con nora > = a 6
-    if (sexo =="m" && nota >= 6) {
-        contador++;
-    }
-
-    i++;
-    alumno++;
-
-
-
-}
-
-
-promedio= notaInc/5;
-alert("La nota mas baja es: "+minimo+" "+sexoUlt+"\n"+
-"El promedio total de notas es de: "+promedio+"\n"+
-"La cantidad de varones con nota mayor o igual a 6 es de: "+contador
-);
-
-
-
-
-
-
-
-
+    alert("Promedio Notas: " + promedioNotas
+        + "\nNota mas baja: " + notaBaja + " Sexo: " + sexoBajo
+        + "\nCantidad Varones mas 6: " + contadorVMas6
+    );
 
 }
